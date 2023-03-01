@@ -1,0 +1,14 @@
+apiVersion: config.gatekeeper.sh/v1alpha1
+kind: Sync
+metadata:
+  annotations:
+  name: sample-sync
+  namespace: gatekeeper-system
+spec:
+  sync:
+  - group: "extensions"
+    version: "v1beta1"
+    kind: "Ingress"
+  - group: "extensions"
+    version: "v1"
+    kind: "Ingress"
